@@ -175,7 +175,7 @@ def main():
 
             is_last_question = (q_index + 1 == len(st.session_state.questions))
             button_text = "Finish Quiz" if is_last_question else "Next Question ->"
-            if st.button(button_text):
+            if st.button(button_text,use_container_width=True):
                 if not is_last_question:
                     st.session_state.current_question += 1
                     st.session_state.state = 'quiz_started'
